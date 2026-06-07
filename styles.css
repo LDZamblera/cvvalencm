@@ -1267,8 +1267,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    FOOTER
 ======================== */
 .footer {
-  background: rgba(124,58,237,0.26);
-  border-top: 1px solid rgba(124,58,237,0.42);
+  background: rgba(124,58,237,0.34);
+  border-top: 1px solid rgba(124,58,237,0.50);
   padding: 60px 0 32px;
 }
 .footer-content {
