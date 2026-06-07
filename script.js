@@ -256,31 +256,15 @@ window.addEventListener('load', initHeroReactions);
 })();
 
 /* ========================
-   6. VALIDACIÓN DEL FORMULARIO + EMAILJS
-   ✏️ EDITAR: tus credenciales de EmailJS
+   6. VALIDACIÓN DEL FORMULARIO + BACKEND
+   Esta versión envía al backend y no expone las claves en el frontend.
 ======================== */
-const EMAILJS_CONFIG = {
-  serviceId:  'service_uk5eff8',
-  templateId: 'template_kkis4f9',
-  publicKey:  'WqSZBRihSczaHTNnS',
-};
-
+const BACKEND_URL = ''; // Dejar vacío para usar el mismo dominio.
+const EMAIL_ENDPOINT = '/api/send-email';
 const MAX_MESSAGE_LENGTH = 250;
 
 const contactForm  = document.getElementById('contactForm');
 const formSuccess  = document.getElementById('formSuccess');
-
-function isEmailJsConfigured() {
-  const { serviceId, templateId, publicKey } = EMAILJS_CONFIG;
-  const placeholders = ['TU_SERVICE_ID', 'TU_TEMPLATE_ID', 'TU_PUBLIC_KEY'];
-  return [serviceId, templateId, publicKey].every(
-    (value, i) => value && value !== placeholders[i]
-  );
-}
-
-if (typeof emailjs !== 'undefined' && isEmailJsConfigured()) {
-  emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
-}
 
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -371,57 +355,36 @@ function truncateText(text, maxLength) {
 async function submitForm() {
   const btn = contactForm.querySelector('button[type="submit"]');
 
-  if (!isEmailJsConfigured()) {
-    if (typeof Swal !== 'undefined') {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Falta configurar EmailJS',
-        text: 'Completá serviceId, templateId y publicKey en script.js.',
-        confirmButtonText: 'Entendido',
-        confirmButtonColor: '#7c3aed',
-        background: '#13131f',
-        color: '#f8f8ff',
-      });
-    }
-    return;
-  }
-
-  if (typeof emailjs === 'undefined') {
-    if (typeof Swal !== 'undefined') {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error al cargar EmailJS',
-        text: 'Revisá tu conexión e intentá de nuevo.',
-        confirmButtonText: 'Entendido',
-        confirmButtonColor: '#7c3aed',
-        background: '#13131f',
-        color: '#f8f8ff',
-      });
-    }
-    return;
-  }
-
   btn.textContent = 'Enviando...';
   btn.disabled = true;
   btn.style.opacity = '0.7';
 
+  const nombre = document.getElementById('nombre').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
   const mensajeRaw = document.getElementById('mensaje').value.trim();
   const mensaje = truncateText(mensajeRaw, MAX_MESSAGE_LENGTH);
 
-  const templateParams = {
-    nombre:   document.getElementById('nombre').value.trim(),
-    email:    document.getElementById('email').value.trim(),
-    telefono: document.getElementById('telefono').value.trim(),
+  const payload = {
+    nombre,
+    email,
+    telefono,
     mensaje,
-    reply_to: document.getElementById('email').value.trim(),
   };
 
   try {
-    await emailjs.send(
-      EMAILJS_CONFIG.serviceId,
-      EMAILJS_CONFIG.templateId,
-      templateParams
-    );
+    const response = await fetch((BACKEND_URL || '') + EMAIL_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.error || 'Error al enviar el mensaje');
+    }
 
     contactForm.reset();
     formSuccess.classList.add('show');
@@ -440,7 +403,7 @@ async function submitForm() {
 
     setTimeout(() => formSuccess.classList.remove('show'), 5000);
   } catch (err) {
-    console.error('EmailJS error:', err);
+    console.error('Contact form error:', err);
     if (typeof Swal !== 'undefined') {
       Swal.fire({
         icon: 'error',
