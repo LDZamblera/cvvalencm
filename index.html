@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentina Moyano | Community Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">VAM<span class="logo-dot">.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="nav-cta">Hablemos</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" src="video/perfecto_pero_en_el_clendario.mp4" aria-hidden="true"></video>
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-label reveal">Disponible para nuevos proyectos</div>
+      <h1 class="hero-title reveal">
+        <span class="line">Valentina</span>
+        <span class="line accent-line">Moyano</span>
+      </h1>
+      <p class="hero-role reveal">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-sub reveal">
+        Ayudo a marcas, emprendimientos y clubes a crecer en redes sociales con contenido creativo, estratégico y audiovisual orientado a resultados reales.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#experiencia" class="btn btn-primary">Ver experiencia</a>
+        <a href="#contacto" class="btn btn-outline">Contactarme</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <canvas id="pageParticleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ===================== SOBRE MÍ ===================== -->
+  <section class="section sobre-mi" id="sobre-mi">
+    <div class="container">
+      <div class="section-tag reveal">01 — Sobre mí</div>
+      <div class="sobre-grid">
+        <div class="sobre-img reveal">
+          <!-- ✏️ EDITAR: Reemplazá el src por tu foto real -->
+          <div class="img-frame">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" alt="Valentina Aylen Moyano - Community Manager" />
+            <div class="img-badge">CM · Capital Federal, CABA</div>
+          </div>
+        </div>
+        <div class="sobre-text">
+          <h2 class="section-title reveal">
+            Contenido que conecta,<br/><em>comunidades que crecen.</em>
+          </h2>
+          <p class="reveal">
+            Soy Valentina Aylen Moyano, Community Manager con formación en Marketing Digital (Coderhouse) y experiencia real gestionando redes sociales en el Club Río de la Plata. Tengo 20 años, soy de Capital Federal y combino creatividad, organización y adaptabilidad para construir presencias digitales que dejan huella.
+          </p>
+          <p class="reveal">
+            Mi recorrido es único: pasé del cuidado de personas — donde aprendí empatía, respuesta rápida y atención al detalle — a la gestión de identidades online. Esa combinación me convierte en una CM que no solo publica: entiende, escucha y genera impacto real en cada comunidad que gestiona.
+          </p>
+          <div class="sobre-stats reveal">
+            <div class="stat"><span class="stat-num">2</span><span class="stat-label">Años de experiencia</span></div>
+            <div class="stat"><span class="stat-num">2</span><span class="stat-label">Redes gestionadas</span></div>
+            <div class="stat"><span class="stat-num">20</span><span class="stat-label">Años</span></div>
+            <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Compromiso</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HABILIDADES ===================== -->
+  <section class="section habilidades" id="habilidades">
+    <div class="container">
+      <div class="section-tag reveal">02 — Habilidades</div>
+      <h2 class="section-title reveal">Lo que domino</h2>
+      <div class="skills-carousel reveal" id="skillsCarousel">
+        <div class="skills-carousel-inner">
+          <button type="button" class="carousel-btn carousel-prev" aria-label="Habilidad anterior">‹</button>
+          <div class="skills-carousel-viewport">
+            <div class="skills-carousel-track">
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Gestión de redes sociales</h3>
+          <p>Instagram y TikTok: publicaciones, stories, reels e interacción con la comunidad.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎬</div>
+          <h3>Contenido audiovisual</h3>
+          <p>Grabación y edición de videos informativos, humorísticos y de actividad deportiva.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Canva</h3>
+          <p>Diseño de piezas visuales: posts, stories, flyers y contenido para redes.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">✂️</div>
+          <h3>Edición de videos</h3>
+          <p>Edición profesional de contenido corto para Instagram Reels y TikTok.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📷</div>
+          <h3>Fotografía</h3>
+          <p>Registro fotográfico de eventos, actividades y momentos institucionales.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💬</div>
+          <h3>Atención a la comunidad</h3>
+          <p>Respuesta a consultas, interacción genuina y gestión del inbox.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📅</div>
+          <h3>Planificación de contenido</h3>
+          <p>Organización de calendarios editoriales mensuales con objetivos claros.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Marketing Digital</h3>
+          <p>Formación certificada en Coderhouse: estrategia, métricas y comunicación digital.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Herramientas Office</h3>
+          <p>Excel, Word, PowerPoint, Outlook y Google Drive para gestión y reportes.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤝</div>
+          <h3>Empatía & trabajo en equipo</h3>
+          <p>Capacidad de entender necesidades ajenas y adaptarme con rapidez a imprevistos.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎯</div>
+          <h3>Creatividad estratégica</h3>
+          <p>Generación de ideas originales que comunican con propósito y generan impacto.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📈</div>
+          <h3>Crecimiento orgánico</h3>
+          <p>Estrategias de contenido para ampliar el alcance sin inversión en publicidad.</p>
+        </div>
+            </div>
+          </div>
+          <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente habilidad">›</button>
+        </div>
+        <div class="carousel-dots" id="skillsDots" aria-label="Navegación del carrusel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="servicios-header reveal">
+        <div class="section-tag">03 — Servicios</div>
+        <h2 class="section-title">¿En qué puedo <em>ayudarte</em>?</h2>
+        <p class="servicios-intro">Todo lo que tu marca necesita en digital, en un solo lugar.</p>
+      </div>
+
+      <div class="servicios-bento">
+        <article class="servicio-card servicio-card--featured reveal">
+          <div class="servicio-icon">📱</div>
+          <div class="servicio-body">
+            <h3>Gestión de redes</h3>
+            <p>Estrategia, publicaciones y comunidad en Instagram y TikTok.</p>
+            <div class="servicio-tags">
+              <span>Publicaciones</span>
+              <span>Stories & Reels</span>
+              <span>Comunidad</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="servicio-card reveal">
+          <div class="servicio-icon">🎬</div>
+          <div class="servicio-body">
+            <h3>Audiovisual</h3>
+            <p>Videos para Reels y TikTok: grabación, edición y subtítulos.</p>
+            <div class="servicio-tags">
+              <span>Reels</span>
+              <span>TikTok</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="servicio-card reveal">
+          <div class="servicio-icon">🎨</div>
+          <div class="servicio-body">
+            <h3>Diseño visual</h3>
+            <p>Piezas en Canva: posts, stories, flyers y destacados.</p>
+            <div class="servicio-tags">
+              <span>Canva</span>
+              <span>Branding</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="servicio-card reveal">
+          <div class="servicio-icon">📅</div>
+          <div class="servicio-body">
+            <h3>Estrategia & copies</h3>
+            <p>Calendario editorial, textos y voz de marca con propósito.</p>
+            <div class="servicio-tags">
+              <span>Planificación</span>
+              <span>Captions</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="servicio-card reveal">
+          <div class="servicio-icon">📊</div>
+          <div class="servicio-body">
+            <h3>Análisis & eventos</h3>
+            <p>Auditorías, métricas mensuales y cobertura en vivo.</p>
+            <div class="servicio-tags">
+              <span>Reportes</span>
+              <span>Eventos</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="servicios-cta reveal">
+        <a href="#contacto" class="btn btn-primary">Hablemos de tu proyecto →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCIA ===================== -->
+  <section class="section experiencia" id="experiencia">
+    <div class="container">
+      <div class="section-tag reveal">04 — Experiencia</div>
+      <h2 class="section-title reveal">Trayectoria profesional</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Junio 2025 — Abril 2026</div>
+            <h3>Community Manager</h3>
+            <p class="timeline-company">Club Río de la Plata · Buenos Aires</p>
+            <p>Gestión integral de Instagram y TikTok del club. Producción de contenido creativo: videos informativos, piezas con connotación humorística y cobertura audiovisual de las actividades deportivas. Interacción directa con usuarios respondiendo consultas y gestionando la comunidad online.</p>
+            <div class="timeline-tags">
+              <span>Instagram</span><span>TikTok</span><span>Video</span><span>Comunidad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Septiembre — Diciembre 2025</div>
+            <h3>Curso de Marketing Digital</h3>
+            <p class="timeline-company">Coderhouse · Certificación oficial</p>
+            <p>Formación intensiva en marketing digital: estrategia de contenido, gestión de redes sociales, análisis de métricas, publicidad digital y comunicación de marca. Graduada con certificado oficial.</p>
+            <div class="timeline-tags">
+              <span>Marketing Digital</span><span>Métricas</span><span>Estrategia</span><span>Certificado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Junio 2024 — Marzo 2026</div>
+            <h3>Niñera Profesional</h3>
+            <p class="timeline-company">Sitly · Modalidad freelance</p>
+            <p>Supervisión y traslado de menores, cobertura de necesidades básicas y desarrollo de actividades didácticas y recreativas. Esta experiencia me formó en empatía profunda, reacción rápida ante imprevistos y comunicación asertiva — habilidades que aplico directamente como Community Manager.</p>
+            <div class="timeline-tags">
+              <span>Responsabilidad</span><span>Empatía</span><span>Adaptabilidad</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Marzo 2023 — Diciembre 2025</div>
+            <h3>Bachiller Secundario</h3>
+            <p class="timeline-company">CENS N°33 · Graduada</p>
+            <p>Finalización del secundario con orientación general. Desarrollo de habilidades de organización, comunicación escrita y trabajo en equipo durante la formación académica.</p>
+            <div class="timeline-tags">
+              <span>Graduada</span><span>Bachiller</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Referencia laboral -->
+      <div class="referencia-box reveal">
+        <div class="referencia-icon">📋</div>
+        <div>
+          <p class="referencia-titulo">Referencia laboral verificable</p>
+          <p><strong>Aaron Sandoval</strong> — Jefe directo en Club Río de la Plata</p>
+          <p class="referencia-contacto">
+            <a href="mailto:aaronsandoval17@hotmail.com">aaronsandoval17@hotmail.com</a>
+            &nbsp;·&nbsp;
+            <a href="tel:541124652721">(54) 11 2465-2721</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PROYECTOS ===================== -->
+  <section class="section proyectos" id="proyectos">
+    <div class="container">
+      <div class="section-tag reveal">05 — Proyectos</div>
+      <h2 class="section-title reveal">Casos destacados</h2>
+      <div class="proyectos-grid">
+
+        <div class="proyecto-card reveal">
+          <div class="proyecto-categoria">Deporte · Club Río de la Plata</div>
+          <h3>Gestión de Instagram y TikTok institucional</h3>
+          <p>Manejo completo de las redes del club: contenido audiovisual deportivo, piezas informativas y videos con humor para acercar la institución a su comunidad.</p>
+          <div class="proyecto-resultados">
+            <div class="resultado"><span>2</span><small>Redes activas</small></div>
+            <div class="resultado"><span>10+</span><small>Meses gestionados</small></div>
+            <div class="resultado"><span>↑</span><small>Interacción real</small></div>
+          </div>
+          <a href="#contacto" class="btn-proyecto">Contactar →</a>
+        </div>
+
+        <div class="proyecto-card reveal">
+          <div class="proyecto-categoria">Contenido audiovisual</div>
+          <h3>Videos deportivos con enfoque creativo</h3>
+          <p>Producción de contenido en formato Reels y TikTok mostrando actividades deportivas, con edición dinámica, música y estética visual coherente con la marca del club.</p>
+          <div class="proyecto-resultados">
+            <div class="resultado"><span>3</span><small>Formatos distintos</small></div>
+            <div class="resultado"><span>📹</span><small>Grabación propia</small></div>
+            <div class="resultado"><span>✂️</span><small>Edición incluida</small></div>
+          </div>
+          <a href="#contacto" class="btn-proyecto">Contactar →</a>
+        </div>
+
+        <div class="proyecto-card reveal">
+          <div class="proyecto-categoria">Comunidad digital</div>
+          <h3>Atención y gestión de la comunidad online</h3>
+          <p>Respuesta a consultas de socios y seguidores, moderación de comentarios y generación de vínculos genuinos entre la institución y su audiencia digital.</p>
+          <div class="proyecto-resultados">
+            <div class="resultado"><span>💬</span><small>Inbox activo</small></div>
+            <div class="resultado"><span>⚡</span><small>Resp. rápida</small></div>
+            <div class="resultado"><span>❤️</span><small>Comunidad fiel</small></div>
+          </div>
+          <a href="#contacto" class="btn-proyecto">Contactar →</a>
+        </div>
+
+        <div class="proyecto-card reveal">
+          <div class="proyecto-categoria">Formación · Coderhouse</div>
+          <h3>Certificación en Marketing Digital</h3>
+          <p>Capacitación intensiva finalizada en diciembre 2025 que potencia la gestión estratégica, el análisis de datos y la planificación de contenido para marcas.</p>
+          <div class="proyecto-resultados">
+            <div class="resultado"><span>✅</span><small>Graduada</small></div>
+            <div class="resultado"><span>3</span><small>Meses intensivos</small></div>
+            <div class="resultado"><span>📜</span><small>Certificado oficial</small></div>
+          </div>
+          <a href="#contacto" class="btn-proyecto">Contactar →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HERRAMIENTAS ===================== -->
+  <section class="section herramientas" id="herramientas">
+    <div class="container">
+      <div class="section-tag reveal">06 — Herramientas</div>
+      <h2 class="section-title reveal">Mi kit digital</h2>
+      <div class="tools-grid reveal">
+        <div class="tool-pill">
+          <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="12" r="7" fill="#00C4CC"/><circle cx="15" cy="12" r="7" fill="#7D2AE8"/></svg>
+          <span>Canva</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/><defs><linearGradient id="ig-grad" x1="0" y1="24" x2="24" y2="0"><stop stop-color="#FD5949"/><stop offset=".5" stop-color="#D6249F"/><stop offset="1" stop-color="#285AEB"/></linearGradient></defs></svg>
+          <span>Instagram</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.9h2.54V9.34c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.9h-2.3v6.99C18.34 21.12 22 16.99 22 12z"/></svg>
+          <span>Facebook</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon tool-icon--mono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.17V11.7a4.84 4.84 0 01-3.77-1.01z"/></svg>
+          <span>TikTok</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon tool-icon--mono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.64 7.64c.78-.78 2.05-.78 2.83 0l.53.53-2.83 2.83-.53-.53c-.78-.78-.78-2.05 0-2.83zm4.24 8.48-.53.53-2.83-2.83.53-.53c.78-.78 2.05-.78 2.83 0 .78.78.78 2.05 0 2.83zM7.05 6.05 5.64 7.46 3.93 5.75l1.41-1.41 1.71 1.71zm11.32 11.32-1.41 1.41-1.71-1.71 1.41-1.41 1.71 1.71zM5.64 16.54l1.41 1.41-1.71 1.71-1.41-1.41 1.71-1.71z"/></svg>
+          <span>CapCut</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon tool-icon--mono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-2zM4 18V8h16v10H4z"/></svg>
+          <span>Edición de video</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon tool-icon--mono" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.2a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4z"/><path fill="currentColor" d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+          <span>Fotografía</span>
+        </div>
+        <div class="tool-pill">
+          <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#0066DA" d="M7.71 2.5 1.15 15.25A1.75 1.75 0 002.6 18h6.55L15.7 2.5H7.71z"/><path fill="#00AC47" d="M12.29 2.5 5.73 15.25A1.75 1.75 0 007.18 18h6.55l6.55-15.5h-7.99z"/><path fill="#EA4335" d="M16.87 2.5 10.31 15.25A1.75 1.75 0 0011.76 18h6.55l6.55-15.5h-7.99z"/><path fill="#00832D" d="M9.58 18 3.02 5.25A1.75 1.75 0 004.47 2.5H12l6.56 15.5H9.58z"/><path fill="#2684FC" d="M14.42 2.5 7.86 15.25A1.75 1.75 0 009.31 18h6.55L22.42 2.5h-8z"/><path fill="#FFBA00" d="M12 2.5c-.68 0-1.32.35-1.68.93L4.76 15.18A1.75 1.75 0 006.21 18H12V2.5z"/></svg>
+          <span>Google Drive</span>
+        </div>
+
+
+        <div class="tool-pill">
+          <svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>WhatsApp Business</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="section-tag reveal">07 — Contacto</div>
+      <h2 class="section-title reveal">¿Hablamos?</h2>
+      <p class="contacto-sub reveal">Estoy disponible para nuevos proyectos. Escribime y te respondo en menos de 24 hs.</p>
+
+      <div class="contacto-grid">
+        <form class="contacto-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            <span class="form-error" id="errorNombre"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            <span class="form-error" id="errorEmail"></span>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Celular / Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="11 1234-5678" required />
+            <span class="form-error" id="errorTelefono"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" maxlength="250" placeholder="Contame sobre tu proyecto..." required></textarea>
+            <span class="form-error" id="errorMensaje"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+          <div class="form-success" id="formSuccess">
+            <span>✓</span> ¡Mensaje enviado! Te respondo pronto.
+          </div>
+        </form>
+
+        <div class="contacto-links reveal">
+          <p class="links-title">O encontrame en:</p>
+          <!-- ✏️ EDITAR: tu número de WhatsApp con código de país, sin espacios ni guiones -->
+          <a href="https://wa.me/5491130263691" target="_blank" class="contact-link" rel="noopener" aria-label="WhatsApp">
+            <div class="link-icon">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <span>+54 9 11 3026-3691</span>
+            </div>
+          </a>
+          <a href="mailto:moyanovalentina2409@gmail.com" class="contact-link" aria-label="Email">
+            <div class="link-icon">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <span>moyanovalentina2409@gmail.com</span>
+            </div>
+          </a>
+          <!-- ✏️ EDITAR: tu usuario de Instagram real -->
+          <a href="https://www.instagram.com/valenmoyano1?igsh=NTdsbDZrcjNoZDVw" target="_blank" class="contact-link" rel="noopener" aria-label="Instagram">
+            <div class="link-icon">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/></svg>
+            </div>
+            <div>
+              <span>@valenmoyano1</span>
+            </div>
+          </a>
+          <!-- ✏️ EDITAR: tu perfil de LinkedIn real -->
+          <a href="https://linkedin.com/in/valentina-moyano" target="_blank" class="contact-link" rel="noopener" aria-label="LinkedIn">
+            <div class="link-icon">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <span>Valentina Moyano</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">VAM<span class="logo-dot">.</span></div>
+        <p class="footer-frase">Creando presencias digitales que conectan y convierten.</p>
+        <div class="footer-socials">
+          <!-- ✏️ EDITAR: tus links reales -->
+          <a href="https://www.instagram.com/valenmoyano1?igsh=NTdsbDZrcjNoZDVw" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@tu_usuario" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.17V11.7a4.84 4.84 0 01-3.77-1.01z"/></svg>
+          </a>
+          <a href="https://wa.me/5491130263691" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="mailto:moyanovalentina2409@gmail.com" aria-label="Email">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 Valentina Aylen Moyano — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  </main>
+
+  <!-- Botón volver arriba -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
