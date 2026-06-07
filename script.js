@@ -382,8 +382,15 @@ async function submitForm() {
     });
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error || 'Error al enviar el mensaje');
+      const text = await response.text();
+      let errorMessage = 'Error al enviar el mensaje';
+      try {
+        const errorData = JSON.parse(text || '{}');
+        errorMessage = errorData.error || errorMessage;
+      } catch {
+        if (text) errorMessage = text;
+      }
+      throw new Error(errorMessage);
     }
 
     contactForm.reset();
@@ -403,7 +410,7 @@ async function submitForm() {
 
     setTimeout(() => formSuccess.classList.remove('show'), 5000);
   } catch (err) {
-    console.error('Contact form error:', err);
+    console.error('Error en formulario de contacto:', err);
     if (typeof Swal !== 'undefined') {
       Swal.fire({
         icon: 'error',

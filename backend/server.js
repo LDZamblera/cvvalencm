@@ -49,7 +49,7 @@ app.post('/send-email', async (req, res) => {
 
     return res.json({ ok: true });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error al enviar el email:', error);
     return res.status(500).json({ error: 'No se pudo enviar el mensaje. Intentá de nuevo más tarde.' });
   }
 });

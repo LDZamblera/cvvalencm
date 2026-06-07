@@ -35,5 +35,6 @@ Despliegue en Vercel:
    - `EMAILJS_SERVICE_ID`
    - `EMAILJS_TEMPLATE_ID`
    - `EMAILJS_PUBLIC_KEY`
+   - `EMAILJS_PRIVATE_KEY`
 3. En la configuración del proyecto no es necesario cambiar nada más: el endpoint quedará disponible en `/api/send-email`.
 
