@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title>VAM</title>
+  <rect width="120" height="120" rx="24" fill="#080810" />
+  <text x="50%" y="60%" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="900" fill="#f8f8ff">VAM</text>
+  <circle cx="102" cy="24" r="8" fill="#a855f7" />
+</svg>
