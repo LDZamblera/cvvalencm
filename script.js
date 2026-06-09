@@ -99,7 +99,33 @@ function typeRole() {
 }
 
 // Inicia el typing con un pequeño delay
-setTimeout(typeRole, 800);
+setTimeout(typeRole, 500);
+
+const birthDate = new Date('2004-09-24');
+
+function calculateAge(dateOfBirth) {
+  const today = new Date();
+  let age = today.getFullYear() - dateOfBirth.getFullYear();
+  const monthDiff = today.getMonth() - dateOfBirth.getMonth();
+  const dayDiff = today.getDate() - dateOfBirth.getDate();
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age -= 1;
+  }
+
+  return age;
+}
+
+function updateAgeValues() {
+  const age = calculateAge(birthDate);
+  const ageText = document.getElementById('ageText');
+  const ageStat = document.querySelector('#ageStat .stat-num');
+
+  if (ageText) ageText.textContent = age;
+  if (ageStat) ageStat.textContent = age;
+}
+
+updateAgeValues();
 
 function initHeroReactions() {
   const hero = document.getElementById('hero');
